@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>IDE</class>
+ <widget class="QMainWindow" name="IDE">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>716</width>
+    <height>492</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Try8085</string>
+  </property>
+  <widget class="QWidget" name="baseLayout">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="mainLayout"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>716</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="menuNew"/>
+    <addaction name="menuOpen"/>
+    <addaction name="menuSave"/>
+    <addaction name="menuSaveAs"/>
+    <addaction name="separator"/>
+    <addaction name="menuSettings"/>
+    <addaction name="menuConnections"/>
+    <addaction name="separator"/>
+    <addaction name="menuExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="menuUndo"/>
+    <addaction name="menuRedo"/>
+    <addaction name="separator"/>
+    <addaction name="menuCut"/>
+    <addaction name="menuCopy"/>
+    <addaction name="menuPaste"/>
+    <addaction name="menuSelectAll"/>
+    <addaction name="separator"/>
+    <addaction name="menuFind"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>&amp;Debug</string>
+    </property>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>Debug actions</string>
+     </property>
+     <addaction name="menuStep"/>
+     <addaction name="menuStart"/>
+    </widget>
+    <addaction name="menuCompile"/>
+    <addaction name="menu_4"/>
+    <addaction name="menuStop"/>
+    <addaction name="menuToEditor"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="menuHelp"/>
+    <addaction name="menuAbout"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_5"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="fileToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="menuNew">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/actions/document-new.png</normaloff>:/Actions/tango/16x16/actions/document-new.png</iconset>
+   </property>
+   <property name="text">
+    <string>New...</string>
+   </property>
+   <property name="shortcut">
+    <string extracomment="Ctrl+N">Ctrl+N</string>
+   </property>
+  </action>
+  <action name="menuOpen">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/actions/document-open.png</normaloff>:/Actions/tango/16x16/actions/document-open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="menuSave">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/actions/document-save.png</normaloff>:/Actions/tango/16x16/actions/document-save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="menuSaveAs">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/actions/document-save-as.png</normaloff>:/Actions/tango/16x16/actions/document-save-as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save as...</string>
+   </property>
+  </action>
+  <action name="menuSettings">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/actions/document-properties.png</normaloff>:/Actions/tango/16x16/actions/document-properties.png</iconset>
+   </property>
+   <property name="text">
+    <string>Settings...</string>
+   </property>
+   <property name="shortcut">
+    <string>F12</string>
+   </property>
+  </action>
+  <action name="menuExit">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/actions/process-stop.png</normaloff>:/Actions/tango/16x16/actions/process-stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="menuUndo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/actions/edit-undo.png</normaloff>:/Actions/tango/16x16/actions/edit-undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="menuRedo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/actions/edit-redo.png</normaloff>:/Actions/tango/16x16/actions/edit-redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="menuCut">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/actions/edit-cut.png</normaloff>:/Actions/tango/16x16/actions/edit-cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="menuCopy">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/actions/edit-copy.png</normaloff>:/Actions/tango/16x16/actions/edit-copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="menuPaste">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/actions/edit-paste.png</normaloff>:/Actions/tango/16x16/actions/edit-paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Paste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="menuSelectAll">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/actions/edit-select-all.png</normaloff>:/Actions/tango/16x16/actions/edit-select-all.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select All</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="menuFind">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/actions/edit-find.png</normaloff>:/Actions/tango/16x16/actions/edit-find.png</iconset>
+   </property>
+   <property name="text">
+    <string>Find</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="menuCompile">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/22x22/actions/media-playback-start.png</normaloff>:/Actions/tango/22x22/actions/media-playback-start.png</iconset>
+   </property>
+   <property name="text">
+    <string>Compile</string>
+   </property>
+   <property name="shortcut">
+    <string>F9</string>
+   </property>
+  </action>
+  <action name="menuStep">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Step</string>
+   </property>
+   <property name="shortcut">
+    <string>F10</string>
+   </property>
+  </action>
+  <action name="menuStart">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+F8</string>
+   </property>
+  </action>
+  <action name="menuStop">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/status/dialog-error.png</normaloff>:/Actions/tango/16x16/status/dialog-error.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+F2</string>
+   </property>
+  </action>
+  <action name="menuToEditor">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/emblem/emblem-symbolic-link.png</normaloff>:/Actions/tango/16x16/emblem/emblem-symbolic-link.png</iconset>
+   </property>
+   <property name="text">
+    <string>Switch to editor</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+F11</string>
+   </property>
+  </action>
+  <action name="menuHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="menuAbout">
+   <property name="text">
+    <string>About...</string>
+   </property>
+  </action>
+  <action name="menuConnections">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Actions/tango/16x16/actions/document-properties.png</normaloff>:/Actions/tango/16x16/actions/document-properties.png</iconset>
+   </property>
+   <property name="text">
+    <string>Modules settings...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

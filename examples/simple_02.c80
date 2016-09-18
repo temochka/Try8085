@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='windows-1251' ?><file><module id='display'>0</module><module id='indicators'>0</module><module id='keyboard'>0</module><source><![CDATA[JMP START
+#ORG 1000h                  ; Задается смещение в памяти
+START:
+DI
+MVI D, 0                     ; 0 -> D
+MVI B, 5h                   ; загрузка B
+MOV A, B                     ; умножение Bx2 через A
+RAL
+MOV B, A
+MVI A, 10                    ; загрузка A
+ADD B                        ; сложение A+B (A+2B)
+MVI C, 2                     ; загрузка C
+SUB C                        ; вычитание A-C (A+2B-C)
+RAR                          ; деление A/2 (A+2B-C)/2
+CMP D                        ; Cравнение с 0
+
+JP  TO1
+CMA
+INR A                        ; переводим в прямой код
+LXI D,M1                     ; адрес M1 в регистровую пару DE
+JMP TO2                      ; => TO2
+TO1:
+LXI D,M2                     ; адрес M2 в регистровую пару DE
+TO2:
+STAX D                       ; загружаем память по адресу содержащемся в DE, регистром А
+HLT                          ; конец выполнения программы
+
+M1:
+db 0
+db 0                         ; M1
+M2:
+db 0                         ; M2
+db 0]]></source></file>

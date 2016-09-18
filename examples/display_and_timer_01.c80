@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='windows-1251' ?><file><module id='display'>1</module><module id='indicators'>0</module><module id='keyboard'>0</module><source><![CDATA[VIDEO = 0300h
+
+JMP START
+#ORG 002Ch
+                            ;обработчик таймера
+DI                          ;запрет прерываний
+PUSH PSW                    ;сохранение слова состояния
+MOV A,M
+CPI 0h                     ;если значение счетчика 0
+JZ INT_R                    ;идем на выход
+DCR M                       ;иначе уменьшаем его на 1
+INT_R:
+POP PSW                     ;восстановление слова состояния
+EI                          ;разрешение прерываний
+RET                         ;возврат из прерывания
+#ORG 003Ch
+                            ;обработчик прерывания от клавиатуры
+RET
+
+#ORG 1000h
+START:
+EI
+LXI SP, 0F000h
+LXI H,COUNT
+LXI B,VIDEO
+MVI A,01h                   ;прерывание от таймера будет происходить
+OUT 90h                     ;один раз за 256 инструкций
+
+MVI A,001101001b           ;устанавливаем цвета дисплея
+OUT 011h
+
+REPIT:
+MVI A,0
+STAX B                       ;выдаем на экран пробел
+
+
+MVI M,05h
+WAIT_1:
+MOV A,M
+ORA A
+JNZ WAIT_1                   ;ждем 256 тиков таймера
+
+MVI A,1
+STAX B                       ;выдаем на экран квадрат
+
+MVI M,05h
+WAIT_2:
+MOV A,M
+ORA A
+JNZ WAIT_2                   ;ждем 256 тиков таймера
+
+JMP REPIT                    ;повторяем цикл                                         
+
+
+
+
+COUNT:
+DB 0h]]></source></file>

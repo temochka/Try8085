@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='windows-1251' ?><file><module id='display'>0</module><module id='indicators'>1</module><module id='keyboard'>1</module><source><![CDATA[S0 = 11111100b          ; 0
+S1 = 01100000b          ; 1
+S2 = 11011010b          ; 2
+S3 = 11110010b          ; 3
+S4 = 01100110b          ; 4
+S5 = 10110110b          ; 5
+S6 = 10111110b          ; 6
+S7 = 11100000b          ; 7
+S8 = 11111110b          ; 8
+S9 = 11110110b          ; 9
+SA = 11101110b			; A
+SB = 00111110b			; b
+SC = 10011100b			; C
+SD = 01111010b			; D
+SE = 10011110b			; E
+SF = 10001110b			; F
+
+JMP START
+#ORG 002Ch                ;обработчик таймера
+DI
+EI
+RET
+
+
+#ORG 0040h                ;обработчик прерывания от клавиатуры
+DI
+IN 40h
+
+MVI B,S0
+CPI 0                     ;если нажата цифра 0
+JZ END_INT
+
+MVI B,S1
+CPI 1                     ;если нажата цифра 1
+JZ END_INT
+
+MVI B,S2
+CPI 2                     ;если нажата цифра 2
+JZ END_INT
+
+MVI B,S3
+CPI 3                     ;если нажата цифра 3
+JZ END_INT
+
+MVI B,S4
+CPI 4                     ;если нажата цифра 4
+JZ END_INT
+
+MVI B,S5
+CPI 5                     ;если нажата цифра 5
+JZ END_INT
+
+MVI B,S6
+CPI 6                     ;если нажата цифра 6
+JZ END_INT
+
+MVI B,S7
+CPI 7                     ;если нажата цифра 7
+JZ END_INT
+
+MVI B,S8
+CPI 8                     ;если нажата цифра 8
+JZ END_INT
+
+MVI B,S9
+CPI 9                     ;если нажата цифра 9
+JZ END_INT
+
+MVI B,SA
+CPI 10                     ;если нажата цифра A
+JZ END_INT
+
+MVI B,SB
+CPI 11                     ;если нажата цифра B
+JZ END_INT
+
+MVI B,SC
+CPI 12                     ;если нажата цифра C
+JZ END_INT
+
+MVI B,SD
+CPI 13                     ;если нажата цифра D
+JZ END_INT
+
+MVI B,SE
+CPI 14                     ;если нажата цифра E
+JZ END_INT
+
+MVI B,SF
+CPI 15                     ;если нажата цифра F
+JZ END_INT
+
+EI                           ;если нажатая кнопка не цифра
+HLT                        ;коней программы
+END_INT:
+
+MOV A,B
+OUT 81h                   ;выдаем цифру на первый индикатор
+EI
+RET
+
+
+#ORG 1000h
+START:
+MVI A, 0Ah
+OUT 91h
+EI
+LXI SP, 0F000h
+MVI B, 0020h
+PUSH B
+LOOP:
+JMP LOOP                   ;бесконечный цикл ожидания прерываний]]></source></file>
