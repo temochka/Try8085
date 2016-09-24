@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='windows-1251' ?><file><module id='display'>0</module><module id='indicators'>0</module><module id='keyboard'>0</module><source><![CDATA[PO = 0A0h
+<?xml version='1.0' encoding='utf-8' ?><file><module id='display'>0</module><module id='indicators'>0</module><module id='keyboard'>0</module><source><![CDATA[PO = 0A0h
 ACP_ON_PORT = PO
 CAP_ON_PORT = PO+1
 SIGNAL_TYPE_PORT = PO+2

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='windows-1251' ?><file><module id='adc'>0</module><module id='display'>0</module><module id='indicators'>0</module><module id='keyboard'>0</module><source><![CDATA[LXI SP, STACK
+<?xml version='1.0' encoding='utf-8' ?><file><module id='adc'>0</module><module id='display'>0</module><module id='indicators'>0</module><module id='keyboard'>0</module><source><![CDATA[LXI SP, STACK
 JMP MAIN
 
 #ORG 100h

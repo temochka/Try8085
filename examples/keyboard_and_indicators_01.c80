@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='windows-1251' ?><file><module id='display'>0</module><module id='indicators'>1</module><module id='keyboard'>1</module><source><![CDATA[S0 = 11111100b          ; 0
+<?xml version='1.0' encoding='utf-8' ?><file><module id='display'>0</module><module id='indicators'>1</module><module id='keyboard'>1</module><source><![CDATA[S0 = 11111100b          ; 0
 S1 = 01100000b          ; 1
 S2 = 11011010b          ; 2
 S3 = 11110010b          ; 3

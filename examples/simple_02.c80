@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='windows-1251' ?><file><module id='display'>0</module><module id='indicators'>0</module><module id='keyboard'>0</module><source><![CDATA[JMP START
+<?xml version='1.0' encoding='utf-8' ?><file><module id='display'>0</module><module id='indicators'>0</module><module id='keyboard'>0</module><source><![CDATA[JMP START
 #ORG 1000h                  ; Задается смещение в памяти
 START:
 DI

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='windows-1251' ?><file><module id='display'>0</module><module id='indicators'>0</module><module id='keyboard'>0</module><source><![CDATA[; Данный пример демонстрирует возможности встроенного в эмулятор транслятора
+<?xml version='1.0' encoding='utf-8' ?><file><module id='display'>0</module><module id='indicators'>0</module><module id='keyboard'>0</module><source><![CDATA[; Данный пример демонстрирует возможности встроенного в эмулятор транслятора
 VIDEO = 080h+10b
 DI
 MVI A, VIDEO

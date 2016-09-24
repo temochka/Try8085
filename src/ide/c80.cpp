@@ -68,7 +68,7 @@ C80::setSource(QString fileName, QString source,
   this->output = new QFile(fileName);
   if (this->output->open(QFile::WriteOnly)) {
     QString ret;
-    ret += "<?xml version='1.0' encoding='windows-1251' ?><file>";
+    ret += "<?xml version='1.0' encoding='utf-8' ?><file>";
     QMapIterator<QString, ModuleSlotWidget> i(*activeModules);
     while (i.hasNext()) {
       i.next();
