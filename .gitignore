@@ -39,3 +39,6 @@ CMakeLists.txt.user*
 
 # Target files
 /target
+
+# MacOS previews
+.DS_Store
