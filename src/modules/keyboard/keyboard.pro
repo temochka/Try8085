@@ -10,3 +10,5 @@ HEADERS += \
     digital_keyboard.h
 RESOURCES += \
     keyboard.qrc
+
+ICON = try8085_keyboard.icns

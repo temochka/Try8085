@@ -10,5 +10,4 @@ HEADERS += indicators.h \
     indicator.h
 RESOURCES += \
     indicators.qrc
-
-DISTFILES +=
+ICON = try8085_indicators.icns

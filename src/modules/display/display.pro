@@ -12,3 +12,5 @@ HEADERS += display.h
 
 RESOURCES += \
     display.qrc
+
+ICON = try8085_display.icns

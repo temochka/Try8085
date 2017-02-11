@@ -48,6 +48,7 @@ RESOURCES += \
 OTHER_FILES += appicon.rc
 
 RC_FILE = appicon.rc
+ICON = try8085.icns
 
 INCLUDEPATH += ../vm
 INCLUDEPATH += ../translator
