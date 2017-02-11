@@ -1,8 +1,18 @@
 <RCC>
     <qresource prefix="/Icons">
-        <file>icons/display_24x24.png</file>
-        <file>icons/display_24x24@2x.png</file>
-        <file>icons/display_64x64.png</file>
-        <file>icons/display_64x64@2x.png</file>
+        <file>try8085_display.iconset/icon_24x24.png</file>
+        <file>try8085_display.iconset/icon_24x24@2x.png</file>
+        <file>try8085_display.iconset/icon_64x64.png</file>
+        <file>try8085_display.iconset/icon_64x64@2x.png</file>
+        <file>try8085_display.iconset/icon_16x16.png</file>
+        <file>try8085_display.iconset/icon_16x16@2x.png</file>
+        <file>try8085_display.iconset/icon_32x32.png</file>
+        <file>try8085_display.iconset/icon_32x32@2x.png</file>
+        <file>try8085_display.iconset/icon_128x128.png</file>
+        <file>try8085_display.iconset/icon_128x128@2x.png</file>
+        <file>try8085_display.iconset/icon_256x256.png</file>
+        <file>try8085_display.iconset/icon_256x256@2x.png</file>
+        <file>try8085_display.iconset/icon_512x512.png</file>
+        <file>try8085_display.iconset/icon_512x512@2x.png</file>
     </qresource>
 </RCC>
