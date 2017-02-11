@@ -21,3 +21,7 @@ QMAKE_BUNDLE_DATA += \
 
 GIT_VERSION = $$system(git --git-dir $$PWD/.git --work-tree $$PWD describe --always --tags)
 DEFINES += GIT_VERSION=\\\"$$GIT_VERSION\\\"
+
+macx {
+    DEFINES += MAC_OS_X
+}

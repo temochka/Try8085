@@ -473,11 +473,14 @@ void
 IDE::initModules()
 {
   this->activeModules.insert(
-    "indicators", ModuleSlotWidget(tr("Block of 8-segment indicators"), "indicators", indicatorsModulePath, false));
+    "indicators", ModuleSlotWidget(tr("Block of 8-segment indicators"),
+                                   "indicators", indicatorsModulePath, false));
   this->activeModules.insert(
-    "display", ModuleSlotWidget(tr("Text display and keyboard"), "display", displayModulePath, false));
+    "display", ModuleSlotWidget(tr("Text display and keyboard"), "display",
+                                displayModulePath, false));
   this->activeModules.insert(
-    "keyboard", ModuleSlotWidget(tr("Digital keyboard"), "keyboard", keyboardModulePath, false));
+    "keyboard", ModuleSlotWidget(tr("Digital keyboard"), "keyboard",
+                                 keyboardModulePath, false));
   this->activeModules.insert(
     "adc", ModuleSlotWidget(tr("ADC/DAC"), "adc", adcModulePath, false));
 }
@@ -525,14 +528,17 @@ IDE::onStepClick()
   this->ui->menuStart->setEnabled(true);
 }
 
-#ifndef MAC_OS_X
+#ifdef MAC_OS_X
 const char* IDE::adcModulePath = "../Resources/adc.app/Contents/MacOS/adc";
-const char* IDE::displayModulePath = "../Resources/display.app/Contents/MacOS/display";
-const char* IDE::indicatorsModulePath = "../Resources/indicators.app/Contents/MacOS/indicators";
-const char* IDE::keyboardModulePath = "../Resources/keyboard.app/Contents/MacOS/keyboard";
+const char* IDE::displayModulePath =
+  "../Resources/display.app/Contents/MacOS/display";
+const char* IDE::indicatorsModulePath =
+  "../Resources/indicators.app/Contents/MacOS/indicators";
+const char* IDE::keyboardModulePath =
+  "../Resources/keyboard.app/Contents/MacOS/keyboard";
 #else
-const char* IDE::adcModulePath = "modules/adc";
-const char* IDE::displayModulePath = "modules/display";
-const char* IDE::indicatorsModulePath = "modules/indicators";
-const char* IDE::keyboardModulePath = "modules/keyboard";
+const char* IDE::adcModulePath = "module/adc";
+const char* IDE::displayModulePath = "module/display";
+const char* IDE::indicatorsModulePath = "module/indicators";
+const char* IDE::keyboardModulePath = "module/keyboard";
 #endif
