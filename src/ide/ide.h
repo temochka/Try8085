@@ -79,6 +79,12 @@ private:
   bool saveModified();
   void saveSettings();
   void loadEditToolbars(bool fl);
+
+  static const char* adcModulePath;
+  static const char* displayModulePath;
+  static const char* indicatorsModulePath;
+  static const char* keyboardModulePath;
+
 private slots:
   void setDebug();
   void showAboutBox();
