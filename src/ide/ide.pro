@@ -55,4 +55,16 @@ INCLUDEPATH += ../translator
 
 LIBS += -L$$TRY8085_LIB_DESTDIR -ltry8085-vm -ltry8085-translator
 
-DISTFILES +=
+DISTFILES += \
+    try8085.icns
+
+TRY8085_MODULES.files = \
+    $${TRY8085_MODULE_DESTDIR}/adc.app \
+    $${TRY8085_MODULE_DESTDIR}/display.app \
+    $${TRY8085_MODULE_DESTDIR}/indicators.app \
+    $${TRY8085_MODULE_DESTDIR}/keyboard.app
+
+TRY8085_MODULES.path = Contents/Resources
+
+QMAKE_BUNDLE_DATA += \
+    TRY8085_MODULES
