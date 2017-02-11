@@ -18,3 +18,6 @@ GPLV3_TEXT.path = Contents/Resources
 
 QMAKE_BUNDLE_DATA += \
     GPLV3_TEXT
+
+GIT_VERSION = $$system(git --git-dir $$PWD/.git --work-tree $$PWD describe --always --tags)
+DEFINES += GIT_VERSION=\\\"$$GIT_VERSION\\\"

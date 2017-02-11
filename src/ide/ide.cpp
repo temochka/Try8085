@@ -454,7 +454,7 @@ IDE::showAboutBox()
 {
   QMessageBox::about(
     this, tr("About Try8085"),
-    tr("<h2>Try8085</h2>"
+    tr("<h2>Try8085 (" GIT_VERSION ")</h2>"
        "<p>Copyright &copy; 2009-2016 Artem Chistyakov, Ilya Beda, Daniil "
        "Zapyatoy</p>"
        "<p>"
