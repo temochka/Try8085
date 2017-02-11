@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2009, 2016  Artem Chistyakov <chistyakov.artem@gmail.com>
+  Copyright (C) 2009, 2016-2017  Artem Chistyakov <chistyakov.artem@gmail.com>
   Copyright (C) 2009  Ilya Beda <ir4y.ix@gmail.com>
   Copyright (C) 2009  Daniil Zapyatoy <zapper.kb@gmail.com>
 

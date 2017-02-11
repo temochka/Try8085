@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2009, 2016  Artem Chistyakov <chistyakov.artem@gmail.com>
+  Copyright (C) 2009, 2016-2017  Artem Chistyakov <chistyakov.artem@gmail.com>
   Copyright (C) 2009  Ilya Beda <ir4y.ix@gmail.com>
   Copyright (C) 2009  Daniil Zapyatoy <zapper.kb@gmail.com>
 
@@ -455,7 +455,7 @@ IDE::showAboutBox()
   QMessageBox::about(
     this, tr("About Try8085"),
     tr("<h2>Try8085 (" GIT_VERSION ")</h2>"
-       "<p>Copyright &copy; 2009-2016 Artem Chistyakov, Ilya Beda, Daniil "
+       "<p>Copyright &copy; 2009-2017 Artem Chistyakov, Ilya Beda, Daniil "
        "Zapyatoy</p>"
        "<p>"
        "Try8085 is free software distributed under "
