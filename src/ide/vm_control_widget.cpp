@@ -167,11 +167,14 @@ void
 VMControlWidget::loadModules(QMap<QString, ModuleSlotWidget>* activeModules)
 {
   QMapIterator<QString, ModuleSlotWidget> i(*activeModules);
+  QFileInfo executableFilePath = QFileInfo(QCoreApplication::applicationFilePath());
+  QDir executablePath = QDir(executableFilePath.absolutePath());
+
   while (i.hasNext()) {
     i.next();
     if (i.value().enabled) {
       this->loadedModules.insert(i.key(), new QProcess(this));
-      this->loadedModules.value(i.key())->start(i.value().fileName,
+      this->loadedModules.value(i.key())->start(executablePath.filePath(i.value().fileName),
                                                 QProcess::ReadWrite);
     }
   }

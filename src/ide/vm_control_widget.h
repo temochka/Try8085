@@ -30,6 +30,8 @@
 #include "vm.h"
 #include "vm_thread.h"
 #include <QDebug>
+#include <QDir>
+#include <QFileInfo>
 #include <QHeaderView>
 #include <QProcess>
 #include <QSharedMemory>
