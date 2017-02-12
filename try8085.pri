@@ -8,6 +8,7 @@ CONFIG(release) {
     CONFIG += static
 }
 
+PROJECT_ROOT = $$PWD
 TRY8085_MODULE_DESTDIR = $$DESTDIR/module
 TRY8085_LIB_DESTDIR = $$DESTDIR/lib
 
