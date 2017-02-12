@@ -3,6 +3,11 @@ include("../../try8085.pri")
 QT += xml
 QT += widgets
 TARGET = try8085
+
+macx {
+    TARGET = Try8085
+}
+
 TEMPLATE = app
 SOURCES += main.cpp \
     c80.cpp \
