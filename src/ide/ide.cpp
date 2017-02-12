@@ -454,7 +454,7 @@ IDE::showAboutBox()
 {
   QMessageBox::about(
     this, tr("About Try8085"),
-    tr("<h2>Try8085 (" GIT_VERSION ")</h2>"
+    tr("<h2>Try8085 (%1)</h2>"
        "<p>Copyright &copy; 2009-2017 Artem Chistyakov, Ilya Beda, Daniil "
        "Zapyatoy</p>"
        "<p>"
@@ -466,7 +466,7 @@ IDE::showAboutBox()
        "<p>Project Supervisor - Ikonnikov A. V., PhD, The Department of "
        "Computing Hardware</p>"
        "<p>Institute of Space and Computer Technologies of Siberian Federal "
-       "University, Russia, Krasnoyarsk</p>"));
+       "University, Russia, Krasnoyarsk</p>").arg(QString(GIT_VERSION)));
 }
 
 void
