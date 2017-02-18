@@ -1,5 +1,7 @@
 # Try8085
 
+<img src="examples/screenshot.jpg?raw=true" width="591" alt="Try8085 running on macOS with two simulated devices" title="Try 8085">
+
 Try8085 is an integrated development environment and simulator of the
 8085 microprocessor. It is intended as an educational tool for teaching
 and studying the 8085 assembly language.
@@ -16,17 +18,24 @@ and studying the 8085 assembly language.
 
 ## Installation
 
-Currently you have to build Try8085 from source. The current release
-is only tested on Linux, but other platforms might work as well.
+Try8085 is available for macOS and GNU/Linux (64-bit only). It comes with 4 virtual devices and code examples.
 
-Build prerequisites are:
+### Download Try8085 V1.0
+
+[macOS (dmg)](https://github.com/temochka/Try8085/releases/download/v1.0/Try8085_v1.0-5-gb472a5e.dmg) | [GNU/Linux (tar.bz2)](https://github.com/temochka/Try8085/releases/download/v1.0/try8085_v1.0-5-gb472a5e-linux-x86_64.tar.bz2)
+
+## Building from source
+
+Build prerequisites:
 
 * Qt 5.6.0 or later
 * g++ 4.8 or later
 
+Use [qdevelop](https://www.qt.io/ide/) to build the solution.
+
 ## License
 
-Copyright © 2009-2016 Artem Chistyakov, Ilya Beda, Daniil Zapyatoy
+Copyright © 2009-2017 Artem Chistyakov, Ilya Beda, Daniil Zapyatoy
 
 See CONTRIBUTORS.md for additional information on contributors.
 
